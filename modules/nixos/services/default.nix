@@ -1,0 +1,7 @@
+{
+  imports = [
+    ./fstrim
+    ./geolocation
+    ./ssh
+  ];
+}
