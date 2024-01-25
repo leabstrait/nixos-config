@@ -15,6 +15,7 @@
         sessionVariables = {
           EDITOR = "emacs";
           BROWSER = "google-chrome-stable";
+          NIXOS_CONFIG_DIR = "${config.home.homeDirectory}/nixos-config";
         };
 
         packages = with pkgs; [
@@ -29,7 +30,16 @@
       };
     };
 
+    nix = {
+      enable = true;
+      allowUnfree = true;
+    };
+
     programs = {
+      bash = {
+        enable = true;
+      };
+
       git = {
         enable = true;
         userName = "Labin Ojha";
@@ -40,11 +50,31 @@
         enable = true;
       };
 
+      hyprland = {
+        enable = true;
+      };
+
+      waybar = {
+        enable = true;
+      };
+
+      wofi = {
+        enable = true;
+      };
+
       kitty = {
         enable = true;
       };
 
       starship = {
+        enable = true;
+      };
+
+      vscode = {
+        enable = true;
+      };
+
+      chromium = {
         enable = true;
       };
     };
@@ -53,6 +83,11 @@
       gammastep = {
         enable = true;
         provider = "geoclue2";
+      };
+
+      hyprpaper = {
+        enable = true;
+        # wallpaperFile = $HOME/nixos-config/wallpapers/space-station-ver-planet.png;
       };
     };
   };

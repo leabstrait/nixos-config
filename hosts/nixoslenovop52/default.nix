@@ -45,27 +45,21 @@
 
       env = {
         sessionVariables = {
-          PAGER = "most";
           LESS = "-SRXF";
           LESSHISTFILE = "$XDG_CACHE_HOME/less.history";
         };
         systemPackages = with pkgs; [
+          # Essential utils
           gnumake
           lshw
-          vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-          wget
-          most
-          emacs
-          vscode
-          wofi
-          google-chrome
-          hyprpaper
           brightnessctl
+          wget
           pamixer
           killall
-          pcmanfm
-          tmux
-          # nixpkgs-fmt
+
+          # Text Editors
+          vim
+          emacs
         ];
       };
 
@@ -144,8 +138,4 @@
       ];
     };
   };
-
-  # Enable Hyprland WM
-  programs.hyprland.enable = true;
-  programs.waybar.enable = true;
 }

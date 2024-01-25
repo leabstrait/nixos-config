@@ -17,6 +17,7 @@ in
     services.gpg-agent = {
       enable = true;
       pinentryFlavor = "tty";
+      enableBashIntegration = true;
     };
   };
 }

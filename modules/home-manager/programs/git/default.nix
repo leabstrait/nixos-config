@@ -21,8 +21,7 @@ in
 
     programs.git = {
       enable = true;
-      userName = cfg.userName;
-      userEmail = cfg.userEmail;
+      inherit (cfg) userName userEmail;
       includes = [{
         path = ./.gitconfig;
       }];
