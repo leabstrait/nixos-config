@@ -34,10 +34,9 @@
         nixoslenovop52 = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
-            ./hosts/common-host
-            ./hosts/nixoslenovop52
+            ./nixos/hosts/nixoslenovop52
 
-            ./modules/nixos
+            ./nixos/modules
           ];
         }; # nixoslenovop52
       };
@@ -51,10 +50,9 @@
           # Specify your home configuration modules here, for example,
           # the path to your home.nix.
           modules = [
-            ./hosts/common-host/common-user
-            ./hosts/nixoslenovop52/users/labin
+            ./home/users/labin/nixoslenovop52
 
-            ./modules/home-manager
+            ./home/modules
           ];
 
           # Optionally use extraSpecialArgs

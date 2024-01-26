@@ -11,35 +11,35 @@ ifndef USERNAME
  $(error username unknown)
 endif
 
-nixos-host-switch:
+flake-update:
+	nix flake update
+
+nixos-switch:
 	nixos-rebuild --flake .#${HOSTNAME} switch --use-remote-sudo --show-trace
 
-nixos-host-boot:
+nixos-boot:
 	nixos-rebuild --flake .#${HOSTNAME} boot --use-remote-sudo --show-trace
 
-nixos-host-test:
+nixos-test:
 	nixos-rebuild --flake .#${HOSTNAME} test --use-remote-sudo --show-trace
 
-nixos-host-upgrade:
-	make nix-flake-update && make nixos-host-switch
+nixos-upgrade:
+	make flake-update && make nixos-switch
 
-nixos-collect-garbage:
+nixos-gc:
 	sudo nix-collect-garbage
 
-nixos-collect-garbage-d:
+nixos-gc-d:
 	sudo nix-collect-garbage -d
 
-hm-user-switch:
+hm-switch:
 	home-manager --flake .#${USERNAME}@${HOSTNAME} switch --show-trace
 
-hm-user-upgrade:
-	make nix-flake-update && make hm-user-switch
+hm-upgrade:
+	make flake-update && make hm-switch
 
-hm-collect-garbage:
+hm-gc:
 	nix-collect-garbage
 
-hm-collect-garbage-d:
+hm-gc-d:
 	nix-collect-garbage -d
-
-nix-flake-update:
-	nix flake update
