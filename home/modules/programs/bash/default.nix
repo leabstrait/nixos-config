@@ -12,6 +12,7 @@ in
     programs.bash = {
       enable = true;
       bashrcExtra = (builtins.readFile ./.bashrc) +  (builtins.readFile ./alias.bashrc);
+      
     };
   };
 }

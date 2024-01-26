@@ -6,8 +6,7 @@ in
 {
   options.lhmconf.programs.hyprland = with types; {
     enable = mkEnableOption "Whether or not to enable hyprland";
-
-  };
+};
 
   config = mkIf cfg.enable {
     wayland.windowManager.hyprland = {

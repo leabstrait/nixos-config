@@ -17,10 +17,7 @@ in
         default = [];
         description = "A list of packages to be available in the system";
       };
-
-
-
-  };
+};
 
   config = {
     environment = {

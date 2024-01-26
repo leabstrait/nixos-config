@@ -39,6 +39,10 @@
         enable = true;
       };
 
+      fzf = {
+        enable = true;
+      };
+
       git = {
         enable = true;
         userName = "Labin Ojha";

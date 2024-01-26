@@ -1,6 +1,7 @@
 {
   imports = [
-    ./core
+    ./home
+    ./nix
     ./services
     ./programs
   ];

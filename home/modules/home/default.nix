@@ -6,7 +6,6 @@ in
 {
   imports = [
     ./env
-    ./nix
   ];
 
   options = {

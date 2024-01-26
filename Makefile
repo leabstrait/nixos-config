@@ -32,14 +32,14 @@ nixos-gc:
 nixos-gc-d:
 	sudo nix-collect-garbage -d
 
-hm-switch:
+home-switch:
 	home-manager --flake .#${USERNAME}@${HOSTNAME} switch --show-trace
 
-hm-upgrade:
-	make flake-update && make hm-switch
+home-upgrade:
+	make flake-update && make home-switch
 
-hm-gc:
+home-gc:
 	nix-collect-garbage
 
-hm-gc-d:
+home-gc-d:
 	nix-collect-garbage -d

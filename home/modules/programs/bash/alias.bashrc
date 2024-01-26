@@ -12,9 +12,6 @@ alias rm="rm -riv"         # Remove  (recursive, verbose, interactive)
 
 alias rs="rsync -r --info=progress2" # Rsync with progress bar
 
-# crypto
-# alias gpg="gpg -c --no-symkey-cache --cipher-algo AES256" # Encrypt with AES256
-
 # editor
 alias v="vim"          # Shorter editor command
 alias sv="sudo -E vim" # Edit file as root with nano
@@ -24,10 +21,6 @@ alias cat="bat --theme=ansi"
 alias df="df -h"                                  # Human-readable sizes
 alias free="free -m"                              # Show sizes in MB
 alias topdisk="du -a . | sort -n -r | head -n 10" # show top 10 large files/dirs
-
-# package manager
-# alias to generate and save mirrorlist for pacman
-alias pmrefresh='sudo reflector --country 'GB,DE' --age 24 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
 
 # sql clients
 alias psql="pgcli"

@@ -6,7 +6,6 @@ let cfg = config.lnixosconf.system;
 in
 {
   imports = [
-    ./nix
     ./bluetooth
     ./boot/systemd
     ./env

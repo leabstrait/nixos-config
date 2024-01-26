@@ -23,7 +23,7 @@ in
         enable = true;
         settings = {
           default_session = {
-            command = "tuigreet --user-menu --time  --sessions ${sessionPackagesWithWaylandSessionsPath}";
+            command = "tuigreet --user-menu --time --remember-user-session --sessions ${sessionPackagesWithWaylandSessionsPath}";
           };
         };
       };

@@ -6,8 +6,7 @@ in
 {
   options.lhmconf.programs.starship = with types; {
     enable = mkEnableOption "Whether or not to enable starship";
-
-  };
+};
 
   config = mkIf cfg.enable {
     programs.starship = {

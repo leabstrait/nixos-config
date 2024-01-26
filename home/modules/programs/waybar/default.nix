@@ -6,8 +6,7 @@ in
 {
   options.lhmconf.programs.waybar = with types; {
     enable = mkEnableOption "Whether or not to enable waybar";
-
-  };
+};
 
   config = mkIf cfg.enable {
     programs.waybar = {

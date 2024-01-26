@@ -17,9 +17,6 @@ in
         default = [ ];
         description = "A list of packages to be available in the home";
       };
-
-
-
   };
 
   config = {
@@ -28,6 +25,5 @@ in
 
       sessionVariables = cfg.sessionVariables;
     };
-
   };
 }
