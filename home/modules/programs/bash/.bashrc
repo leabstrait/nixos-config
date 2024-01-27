@@ -20,7 +20,7 @@ source $HOME/notes/notes.sh
 # we use tree to show the directory's contents.
 # We only load the first 200 lines of the file which enables fast previews
 # of large text files.
-# Requires highlight and tree: pacman -S highlight tree
+# Requires highlight and tree to be installed
 export FZF_DEFAULT_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200'"
 
 

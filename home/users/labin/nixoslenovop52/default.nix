@@ -19,7 +19,16 @@
 
         packages = with pkgs; [
           eza
+
           bat
+
+          ripgrep
+
+          mc
+
+          fzf
+          highlight
+          tree
         ];
       };
 
@@ -36,10 +45,6 @@
 
     programs = {
       bash = {
-        enable = true;
-      };
-
-      fzf = {
         enable = true;
       };
 

@@ -9,6 +9,8 @@ alias cp="cp -riv"         # Copy    (recursive, verbose, interactive)
 alias mkdir='mkdir -vp'    # Makedir (verbose, parents)
 alias mv="mv -iv"          # Move    (recursive, verbose, interactive))
 alias rm="rm -riv"         # Remove  (recursive, verbose, interactive)
+alias tree="eza --tree"
+alias fcd="cd ~ && cd \$(find * -type d | fzf)"
 
 alias rs="rsync -r --info=progress2" # Rsync with progress bar
 
