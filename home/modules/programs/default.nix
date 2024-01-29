@@ -10,6 +10,8 @@
     ./chromium
     ./hyprland
     ./waybar
+    ./swaylock
+    ./wlogout
     ./wofi
   ];
 }

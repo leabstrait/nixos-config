@@ -66,6 +66,14 @@
         enable = true;
       };
 
+      swaylock = {
+        enable = true;
+      };
+
+      wlogout = {
+        enable = true;
+      };
+
       wofi = {
         enable = true;
       };
@@ -88,6 +96,10 @@
     };
 
     services = {
+      swayidle = {
+        enable = true;
+      };
+
       gammastep = {
         enable = true;
         provider = "geoclue2";

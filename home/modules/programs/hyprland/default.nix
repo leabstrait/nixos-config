@@ -17,8 +17,6 @@ in
 
           exec-once = [
             "waybar"
-            # "gammastep"
-            # "gammastep-indicator"
             "google-chrome-stable"
             "blueman-applet"
           ];
@@ -152,6 +150,9 @@ in
             "$mainMod, R, exec, wofi --show drun"
             "$mainMod, P, pseudo, # dwindle"
             "$mainMod, J, togglesplit, # dwindle"
+            "$mainMod, L, exec, swaylock"
+            "$mainMod SHIFT, L, exec, wlogout"
+
 
             # Move focus with mainMod + arrow keys
             "$mainMod, left, movefocus, l"

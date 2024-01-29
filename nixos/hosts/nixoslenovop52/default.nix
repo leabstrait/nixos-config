@@ -104,6 +104,19 @@
       allowUnfree = true;
     };
 
+    security = {
+      polkit = {
+        enable = false;
+      };
+      pam = {
+        services = {
+          swaylock = {
+            enable = true;
+          };
+        };
+      };
+    };
+
     programs = {
       hyprland = {
         enable = true;

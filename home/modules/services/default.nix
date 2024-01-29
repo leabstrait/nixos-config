@@ -3,5 +3,6 @@
     ./gammastep
     ./hyprpaper
     ./mpvpaper
+    ./swayidle
   ];
 }
