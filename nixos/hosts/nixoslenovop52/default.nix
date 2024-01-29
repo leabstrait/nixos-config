@@ -51,6 +51,9 @@
           wget
           pamixer
           killall
+          procps
+          sysvtools
+          sysvinit
 
           # Text Editors
           vim

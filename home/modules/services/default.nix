@@ -2,5 +2,6 @@
   imports = [
     ./gammastep
     ./hyprpaper
+    ./mpvpaper
   ];
 }

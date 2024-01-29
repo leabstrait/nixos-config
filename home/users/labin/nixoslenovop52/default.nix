@@ -98,8 +98,25 @@
         wallpapers = [
           {
             monitor = "eDP-1";
-            wallpaperFile = "~/Pictures/space-station-over-planet.jpg";
+            wallpaperFile = "${config.lhmconf.home.homeDirectory}/Pictures/space-station-over-planet.jpg";
           }
+        ];
+      };
+
+      mpvpaper = {
+        enable = false;
+        wallpapers = [
+          {
+            mpvOptions = "--no-audio --loop";
+            monitor = "eDP-1";
+            # wallpaperFile = "${config.lhmconf.home.homeDirectory}/Pictures/space-station-over-planet.mp4";
+            wallpaperFile = "https://www.youtube.com/watch?v=P9C25Un7xaM&ab_channel=NASA";
+          }
+          # {
+          #   mpvOptions = "";
+          #   monitor = "eDP-2";
+          #   wallpaperFile = "https://www.youtube.com/watch?v=P9C25Un7xaM&ab_channel=NASA";
+          # }
         ];
       };
     };
