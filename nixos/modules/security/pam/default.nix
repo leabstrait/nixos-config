@@ -13,6 +13,11 @@ in
   };
 
   config = mkIf cfg.enable {
-    security.pam.services.swaylock = { };
+    security.pam.services.swaylock = {
+      enableGnomeKeyring = true;
+    };
+    security.pam.services.greetd = {
+      enableGnomeKeyring = true;
+    };
   };
 }

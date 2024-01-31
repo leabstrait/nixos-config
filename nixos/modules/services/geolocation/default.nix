@@ -13,7 +13,6 @@ in
   };
 
   config = mkIf cfg.enable {
-    # Enable geoclue2
     services.geoclue2.enable = true;
   };
 }

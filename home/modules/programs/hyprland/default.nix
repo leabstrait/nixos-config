@@ -17,8 +17,10 @@ in
 
           exec-once = [
             "waybar"
-            "google-chrome-stable"
+            # "google-chrome-stable"
             "blueman-applet"
+            "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1" # move to systemd service
+            "systemctl --user import-environment" # https://github.com/NixOS/nixpkgs/issues/189851
           ];
 
           env = "XCURSOR_SIZE,24";

@@ -84,6 +84,10 @@
         };
       };
 
+      xdg = {
+        enable = true;
+      };
+
       autoUpgrade = {
         enable = true;
         allowReboot = false;
@@ -106,7 +110,7 @@
 
     security = {
       polkit = {
-        enable = false;
+        enable = true;
       };
       pam = {
         services = {
@@ -114,6 +118,9 @@
             enable = true;
           };
         };
+      };
+      keyring = {
+        enable = true;
       };
     };
 

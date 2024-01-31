@@ -7,7 +7,7 @@ let
 
   sessionPackages = config.services.xserver.displayManager.sessionPackages;
   sessionPackagesWithWaylandSessions = map (pkg: "${pkg}/share/wayland-sessions") sessionPackages;
-  sessionPackagesWithWaylandSessionsPath = lib.concatStringsSep ":" sessionPackagesWithWaylandSessions;
+  sessionPackagesWithWaylandSessionsPaths = lib.concatStringsSep ":" sessionPackagesWithWaylandSessions;
 
 in
 {
@@ -19,16 +19,18 @@ in
 
   config = mkIf cfg.enable
     {
+      environment.systemPackages = [
+        pkgs.greetd.tuigreet
+      ];
+
       services.greetd = {
         enable = true;
         settings = {
           default_session = {
-            command = "tuigreet --user-menu --time --remember --remember-user-session --sessions ${sessionPackagesWithWaylandSessionsPath}";
+            command = "tuigreet --issue --time --user-menu --asterisks --remember --remember-user-session --sessions ${sessionPackagesWithWaylandSessionsPaths}";
           };
         };
       };
-      environment.systemPackages = [
-        pkgs.greetd.tuigreet
-      ];
+
     };
 }

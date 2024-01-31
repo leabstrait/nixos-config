@@ -15,6 +15,7 @@ in
     ./time
     ./fonts
     ./graphics
+    ./xdg
   ];
 
   options = {

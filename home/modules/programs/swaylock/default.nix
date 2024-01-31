@@ -1,4 +1,4 @@
-{ lib, config, ... }:
+{ lib, config, pkgs, ... }:
 with lib;
 let
   cfg = config.lhmconf.programs.swaylock;
@@ -11,6 +11,7 @@ in
   config = mkIf cfg.enable {
     programs.swaylock = {
       enable = true;
+      package = pkgs.swaylock-effects;
     };
   };
 }

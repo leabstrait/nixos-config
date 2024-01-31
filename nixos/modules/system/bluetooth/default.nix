@@ -2,22 +2,20 @@
 
 with lib;
 
-let cfg = config.lnixosconf.system.sound;
+let cfg = config.lnixosconf.system.bluetooth;
 in
 {
   options = {
-    lnixosconf.system.sound = {
-      enable = with types; mkEnableOption "Whether or not to enable sound support";
+    lnixosconf.system.bluetooth = {
+      enable = with types; mkEnableOption "Whether or not to enable bluetooth support";
     };
   };
 
   config = mkIf cfg.enable {
-    sound = {
+    hardware.bluetooth = {
       enable = true;
+      powerOnBoot = true;
     };
-    hardware.pulseaudio = {
-      enable = true;
-      package = pkgs.pulseaudioFull; # Extra codecs apart from SBC: AAC, APTX, APTX-HD, LDAC
-    };
+    services.blueman.enable = true; # Bluetooth Manager
   };
 }

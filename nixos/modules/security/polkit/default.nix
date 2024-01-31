@@ -14,5 +14,7 @@ in
 
   config = mkIf cfg.enable {
     security.polkit.enable = true;
+
+    environment.systemPackages = [ pkgs.polkit_gnome ];
   };
 }

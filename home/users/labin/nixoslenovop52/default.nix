@@ -32,6 +32,10 @@
         ];
       };
 
+      xdg = {
+        enable = true;
+      };
+
       autoUpgrade = {
         enable = true;
         frequency = "weekly";

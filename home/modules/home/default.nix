@@ -6,6 +6,7 @@ in
 {
   imports = [
     ./env
+    ./xdg
   ];
 
   options = {
