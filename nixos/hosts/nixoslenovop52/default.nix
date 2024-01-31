@@ -112,13 +112,6 @@
       polkit = {
         enable = true;
       };
-      pam = {
-        services = {
-          swaylock = {
-            enable = true;
-          };
-        };
-      };
       keyring = {
         enable = true;
       };
