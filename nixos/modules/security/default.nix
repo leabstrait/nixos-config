@@ -2,5 +2,6 @@
   imports = [
     ./polkit
     ./keyring
+    ./pam
   ];
 }

@@ -112,6 +112,13 @@
       polkit = {
         enable = true;
       };
+
+      pam = {
+        swaylock = {
+          enable = true;
+        };
+      };
+
       keyring = {
         enable = true;
       };
